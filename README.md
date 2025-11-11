@@ -1,2 +1,2 @@
-# Contact-Manager
-A Basic Full Stack App to manage Contacts
+## Contact-Manager
+# A Basic Full Stack App to manage Contacts
