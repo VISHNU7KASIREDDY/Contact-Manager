@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Pencil, Trash2, X } from "lucide-react";
+import { API_URL } from "../config";
 
 const ContactTable = ({ contacts, onDelete, onUpdate }) => {
   const [editingContact, setEditingContact] = useState(null);
@@ -21,7 +22,7 @@ const ContactTable = ({ contacts, onDelete, onUpdate }) => {
 
   const handleUpdate = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/contacts/${editingContact.id}`, {
+      const res = await fetch(`${API_URL}/contacts/${editingContact.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
